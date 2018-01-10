@@ -32,7 +32,7 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:sensors
-LIBS:Power_Supplies
+LIBS:ESP8266
 LIBS:esp-switch-cache
 EELAYER 25 0
 EELAYER END
@@ -286,7 +286,7 @@ U 1 1 5A12F2D1
 P 9250 3400
 F 0 "R6" V 9330 3400 50  0000 C CNN
 F 1 "470R" V 9250 3400 50  0000 C CNN
-F 2 "Resistors_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P5.08mm_Vertical" V 9180 3400 50  0001 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P7.62mm_Vertical" V 9180 3400 50  0001 C CNN
 F 3 "" H 9250 3400 50  0001 C CNN
 	1    9250 3400
 	0    1    1    0   
@@ -296,17 +296,6 @@ Wire Wire Line
 Wire Wire Line
 	9000 3400 9100 3400
 Connection ~ 9000 3100
-$Comp
-L Screw_Terminal_01x02 J2
-U 1 1 5A12FA42
-P 10100 2650
-F 0 "J2" H 10100 2750 50  0000 C CNN
-F 1 "Screw_Terminal_01x02" H 10100 2850 50  0000 C CNN
-F 2 "Connectors_Terminal_Blocks:TerminalBlock_Pheonix_MKDS1.5-2pol" H 10100 2650 50  0001 C CNN
-F 3 "" H 10100 2650 50  0001 C CNN
-	1    10100 2650
-	1    0    0    1   
-$EndComp
 Wire Wire Line
 	8300 3100 8350 3100
 Wire Wire Line
@@ -320,10 +309,6 @@ Connection ~ 9500 3400
 Wire Wire Line
 	9500 2550 9500 2850
 Connection ~ 9500 2550
-Wire Wire Line
-	9900 2650 9900 3400
-Wire Wire Line
-	9900 3400 9400 3400
 $Comp
 L MOC3041M U4
 U 1 1 5A132A8B
@@ -431,7 +416,7 @@ U 1 1 5A132AC2
 P 9250 5250
 F 0 "R8" V 9330 5250 50  0000 C CNN
 F 1 "470R" V 9250 5250 50  0000 C CNN
-F 2 "Resistors_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P5.08mm_Vertical" V 9180 5250 50  0001 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P7.62mm_Vertical" V 9180 5250 50  0001 C CNN
 F 3 "" H 9250 5250 50  0001 C CNN
 	1    9250 5250
 	0    1    1    0   
@@ -441,17 +426,6 @@ Wire Wire Line
 Wire Wire Line
 	9000 5250 9100 5250
 Connection ~ 9000 4950
-$Comp
-L Screw_Terminal_01x02 J3
-U 1 1 5A132ACB
-P 10100 4500
-F 0 "J3" H 10100 4600 50  0000 C CNN
-F 1 "Screw_Terminal_01x02" H 10100 4700 50  0000 C CNN
-F 2 "Connectors_Terminal_Blocks:TerminalBlock_Pheonix_MKDS1.5-2pol" H 10100 4500 50  0001 C CNN
-F 3 "" H 10100 4500 50  0001 C CNN
-	1    10100 4500
-	1    0    0    1   
-$EndComp
 Wire Wire Line
 	8300 4950 8350 4950
 Wire Wire Line
@@ -466,37 +440,9 @@ Wire Wire Line
 	9500 4400 9500 4700
 Connection ~ 9500 4400
 Wire Wire Line
-	9900 4500 9900 5250
-Wire Wire Line
 	9900 5250 9400 5250
-$Comp
-L Fuse_Small F1
-U 1 1 5A136B02
-P 9750 2550
-F 0 "F1" H 9750 2490 50  0000 C CNN
-F 1 "Fuse_Small" H 9750 2610 50  0000 C CNN
-F 2 "Resistors_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P12.70mm_Horizontal" H 9750 2550 50  0001 C CNN
-F 3 "" H 9750 2550 50  0001 C CNN
-	1    9750 2550
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9900 2550 9850 2550
 Wire Wire Line
 	9650 2550 9400 2550
-$Comp
-L Fuse_Small F2
-U 1 1 5A136CC1
-P 9750 4400
-F 0 "F2" H 9750 4340 50  0000 C CNN
-F 1 "Fuse_Small" H 9750 4460 50  0000 C CNN
-F 2 "Resistors_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P12.70mm_Horizontal" H 9750 4400 50  0001 C CNN
-F 3 "" H 9750 4400 50  0001 C CNN
-	1    9750 4400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9900 4400 9850 4400
 Wire Wire Line
 	9650 4400 9400 4400
 $Comp
@@ -598,4 +544,43 @@ Wire Wire Line
 	1200 2300 1200 2500
 Wire Wire Line
 	1200 1100 1500 1100
+$Comp
+L Screw_Terminal_01x03 J1
+U 1 1 5A55A532
+P 10650 3650
+F 0 "J1" H 10650 3850 50  0000 C CNN
+F 1 "Screw_Terminal_01x03" H 10650 3450 50  0000 C CNN
+F 2 "Connectors_Terminal_Blocks:TerminalBlock_Pheonix_MKDS1.5-3pol" H 10650 3650 50  0001 C CNN
+F 3 "" H 10650 3650 50  0001 C CNN
+	1    10650 3650
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	9900 3400 9400 3400
+$Comp
+L Fuse_Small F1
+U 1 1 5A136B02
+P 10150 3550
+F 0 "F1" H 10150 3490 50  0000 C CNN
+F 1 "Fuse_Small" H 10150 3610 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P12.70mm_Horizontal" H 10150 3550 50  0001 C CNN
+F 3 "" H 10150 3550 50  0001 C CNN
+	1    10150 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9650 2550 9650 4400
+Wire Wire Line
+	10050 3550 9650 3550
+Connection ~ 9650 3550
+Wire Wire Line
+	10250 3550 10450 3550
+Wire Wire Line
+	9900 3400 9900 3650
+Wire Wire Line
+	9900 3650 10450 3650
+Wire Wire Line
+	9900 5250 9900 3750
+Wire Wire Line
+	9900 3750 10450 3750
 $EndSCHEMATC
