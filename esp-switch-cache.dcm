@@ -1,0 +1,8 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP Q_TRIAC_AAG
+D triode for alternating current (TRIAC)
+K triode for alternating current TRIAC
+$ENDCMP
+#
+#End Doc Library
