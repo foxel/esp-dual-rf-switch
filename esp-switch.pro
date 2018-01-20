@@ -1,4 +1,4 @@
-update=Wed 10 Jan 2018 10:15:18 AM +07
+update=Пт 19 янв 2018 22:01:36
 version=1
 last_client=kicad
 [pcbnew]
@@ -64,3 +64,5 @@ LibName32=valves
 LibName33=/home/foxel/kicad/libraries/stavros-kicad-lib/sensors
 LibName34=/home/foxel/kicad/libraries/kicad-ESP8266/ESP8266
 LibName35=/home/kupreychik_af/kicad/libraries/KiCAD_Libraries-master/Schematic/Power_Supplies
+LibName36=triac_ttg
+LibName37=hlk-pm05
