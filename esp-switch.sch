@@ -352,12 +352,12 @@ $EndComp
 $Comp
 L Screw_Terminal_01x02 J5
 U 1 1 5A558F98
-P 10100 1500
-F 0 "J5" H 10100 1600 50  0000 C CNN
-F 1 "Screw_Terminal_01x02" H 10100 1700 50  0000 C CNN
-F 2 "Connectors_Terminal_Blocks:TerminalBlock_Pheonix_MKDS1.5-2pol" H 10100 1500 50  0001 C CNN
-F 3 "" H 10100 1500 50  0001 C CNN
-	1    10100 1500
+P 10450 1500
+F 0 "J5" H 10450 1600 50  0000 C CNN
+F 1 "Screw_Terminal_01x02" H 10450 1700 50  0000 C CNN
+F 2 "Connectors_Terminal_Blocks:TerminalBlock_Pheonix_MKDS1.5-2pol" H 10450 1500 50  0001 C CNN
+F 3 "" H 10450 1500 50  0001 C CNN
+	1    10450 1500
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -399,7 +399,7 @@ U 1 1 5A136B02
 P 10150 3550
 F 0 "F1" H 10150 3490 50  0000 C CNN
 F 1 "Fuse_Small" H 10150 3610 50  0000 C CNN
-F 2 "Resistors_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P12.70mm_Horizontal" H 10150 3550 50  0001 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" H 10150 3550 50  0001 C CNN
 F 3 "" H 10150 3550 50  0001 C CNN
 	1    10150 3550
 	1    0    0    -1  
@@ -553,7 +553,7 @@ Wire Wire Line
 Wire Wire Line
 	9900 1500 9750 1500
 Wire Wire Line
-	9900 1600 9750 1600
+	9750 1600 10250 1600
 Wire Wire Line
 	9150 1600 9050 1600
 Wire Wire Line
@@ -678,4 +678,17 @@ Wire Wire Line
 Wire Wire Line
 	6200 2800 6050 2800
 Connection ~ 4100 1500
+$Comp
+L Fuse_Small F2
+U 1 1 5A6693E1
+P 10000 1500
+F 0 "F2" H 10000 1440 50  0000 C CNN
+F 1 "Fuse_Small" H 10000 1560 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" H 10000 1500 50  0001 C CNN
+F 3 "" H 10000 1500 50  0001 C CNN
+	1    10000 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10100 1500 10250 1500
 $EndSCHEMATC
