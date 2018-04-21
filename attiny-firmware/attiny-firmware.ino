@@ -13,10 +13,10 @@ void setup() {
   PORTB = 0x00 | 0x04; // loads | RF SW
 
   DDRA = 0x00;
-  PORTA = 0x0f;
+  PUEA = 0x0f;
 
   GIMSK |= _BV(PCIE0);
-  PCMSK0 |= _BV(PCINT0) | _BV(PCINT1) | _BV(PCINT2) | _BV(PCINT3);
+  PCMSK0 = _BV(PCINT0) | _BV(PCINT1) | _BV(PCINT2) | _BV(PCINT3);
 
   Serial1.begin(19200);
 }
