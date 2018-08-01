@@ -1,4 +1,4 @@
-# ESP8266 Dual RF switch
+# LightFox Dual - ESP8266 Dual RF switch for lights
 
 ![photo](esp-switch.jpg)
 
