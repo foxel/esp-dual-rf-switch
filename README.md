@@ -2,6 +2,15 @@
 
 ![photo](esp-switch.jpg)
 
+## Connecting the board
+
+![connectors](connectors.jpg)
+
+The board has following connectors:
+* mains connector with sqrew terminals (`Lin`, `L1`, `L2`, `N`). Mains supply should be connected to `Lin` and one of `N` terminals. The loads are connected to `L1`/`L2` and one of `N` terminals.
+* ISP connector for ATTiny flashing. Pins are (from left to right): `RST`, `MOSI`, `MISO`, `SCL`)
+* switches output connector for debug, etc. These are connected to ATTiny outputs controlling triacs. Pins are (from left to right): `L1`, `L2`, `3V3`, `GND`.
+
 ## Schematics
 
 ![shematics](esp-switch-schema.png)
@@ -14,7 +23,14 @@
 
 There are two microcontrollers to run this switch
 * **ESP-01** - use Tasmota firmware fork: https://github.com/foxel/Sonoff-Tasmota/tree/foxel_dual_rf
-* **ATTINY441** - firmware is in `attiny-firmware` folder. This requires ATTinyCore to build: https://github.com/SpenceKonde/ATTinyCore
+* **ATTINY441** - firmware is in `attiny-firmware` folder. This requires [ATTinyCore](https://github.com/SpenceKonde/ATTinyCore) to build
+
+To flash ESP module connect it to PC any available way (e.g. USB-Serail adapter + breadboard) and follow Tasmota flashing instructions.
+
+To flash ATTINY:
+* remove ESP-01 module from the header
+* connect ISP programmer (i.e. Arduino flashed with ArduinoISP) to ISP port
+* use Arduino to flash MC: board is ATTiny441 (installed from [ATTinyCore](https://github.com/SpenceKonde/ATTinyCore))
 
 ## BOM
 
