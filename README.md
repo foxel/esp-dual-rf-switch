@@ -22,10 +22,13 @@ The board has following connectors:
 ## Firmware
 
 There are two microcontrollers to run this switch
-* **ESP-01** - use Tasmota firmware fork: https://github.com/foxel/Sonoff-Tasmota/tree/foxel_dual_rf
+* **ESP-01** - use one of available firmware options:
+  * ESPurna firmware: https://github.com/foxel/espurna/tree/lightfox-dual
+  * Tasmota firmware: https://github.com/foxel/Sonoff-Tasmota/tree/foxel_dual_rf
+
 * **ATTINY441** - firmware is in `attiny-firmware` folder. This requires [ATTinyCore](https://github.com/SpenceKonde/ATTinyCore) to build
 
-To flash ESP module connect it to PC any available way (e.g. USB-Serail adapter + breadboard) and follow Tasmota flashing instructions.
+To flash ESP module connect it to PC any available way (e.g. USB-Serail adapter + breadboard) and follow selected firmware option flashing instructions.
 
 To flash ATTINY:
 * remove ESP-01 module from the header
