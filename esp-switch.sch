@@ -117,28 +117,6 @@ F 3 "" H 8615 3000 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LED D1
-U 1 1 5A12EBCD
-P 7950 2850
-F 0 "D1" H 7950 2950 50  0000 C CNN
-F 1 "LED" H 7950 2750 50  0000 C CNN
-F 2 "LEDs:LED_D3.0mm" H 7950 2850 50  0001 C CNN
-F 3 "" H 7950 2850 50  0001 C CNN
-	1    7950 2850
-	0    -1   -1   0   
-$EndComp
-$Comp
-L R R1
-U 1 1 5A12ECC7
-P 7950 3450
-F 0 "R1" V 8030 3450 50  0000 C CNN
-F 1 "470R" V 7950 3450 50  0000 C CNN
-F 2 "Resistors_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 7880 3450 50  0001 C CNN
-F 3 "" H 7950 3450 50  0001 C CNN
-	1    7950 3450
-	1    0    0    -1  
-$EndComp
-$Comp
 L R R3
 U 1 1 5A12ED7C
 P 8300 3450
@@ -205,28 +183,6 @@ F 3 "" H 8615 4850 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LED D2
-U 1 1 5A132A92
-P 7950 4700
-F 0 "D2" H 7950 4800 50  0000 C CNN
-F 1 "LED" H 7950 4600 50  0000 C CNN
-F 2 "LEDs:LED_D3.0mm" H 7950 4700 50  0001 C CNN
-F 3 "" H 7950 4700 50  0001 C CNN
-	1    7950 4700
-	0    -1   -1   0   
-$EndComp
-$Comp
-L R R2
-U 1 1 5A132A98
-P 7950 5300
-F 0 "R2" V 8030 5300 50  0000 C CNN
-F 1 "470R" V 7950 5300 50  0000 C CNN
-F 2 "Resistors_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 7880 5300 50  0001 C CNN
-F 3 "" H 7950 5300 50  0001 C CNN
-	1    7950 5300
-	1    0    0    -1  
-$EndComp
-$Comp
 L R R4
 U 1 1 5A132A9E
 P 8300 5300
@@ -240,12 +196,12 @@ $EndComp
 $Comp
 L GND #PWR05
 U 1 1 5A132AA4
-P 8100 5700
-F 0 "#PWR05" H 8100 5450 50  0001 C CNN
-F 1 "GND" H 8100 5550 50  0000 C CNN
-F 2 "" H 8100 5700 50  0001 C CNN
-F 3 "" H 8100 5700 50  0001 C CNN
-	1    8100 5700
+P 8300 5600
+F 0 "#PWR05" H 8300 5350 50  0001 C CNN
+F 1 "GND" H 8300 5450 50  0000 C CNN
+F 2 "" H 8300 5600 50  0001 C CNN
+F 3 "" H 8300 5600 50  0001 C CNN
+	1    8300 5600
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -428,35 +384,13 @@ $EndComp
 $Comp
 L Fuse_Small F1
 U 1 1 5A136B02
-P 10150 3550
-F 0 "F1" H 10150 3490 50  0000 C CNN
-F 1 "Fuse_Small" H 10150 3610 50  0000 C CNN
-F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" H 10150 3550 50  0001 C CNN
-F 3 "" H 10150 3550 50  0001 C CNN
-	1    10150 3550
+P 10050 1500
+F 0 "F1" H 10050 1440 50  0000 C CNN
+F 1 "Fuse_Small" H 10050 1560 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" H 10050 1500 50  0001 C CNN
+F 3 "" H 10050 1500 50  0001 C CNN
+	1    10050 1500
 	1    0    0    -1  
-$EndComp
-$Comp
-L Screw_Terminal_01x03 J1
-U 1 1 5A55A532
-P 10650 3650
-F 0 "J1" H 10650 3850 50  0000 C CNN
-F 1 "Screw_Terminal_01x03" H 10650 3450 50  0000 C CNN
-F 2 "Connectors_Terminal_Blocks:TerminalBlock_Pheonix_MKDS1.5-3pol" H 10650 3650 50  0001 C CNN
-F 3 "" H 10650 3650 50  0001 C CNN
-	1    10650 3650
-	1    0    0    1   
-$EndComp
-$Comp
-L Screw_Terminal_01x03 J3
-U 1 1 5AEEDF87
-P 10600 1350
-F 0 "J3" H 10600 1550 50  0000 C CNN
-F 1 "Screw_Terminal_01x03" H 10600 1150 50  0000 C CNN
-F 2 "Connectors_Terminal_Blocks:TerminalBlock_Pheonix_MKDS1.5-3pol" H 10600 1350 50  0001 C CNN
-F 3 "" H 10600 1350 50  0001 C CNN
-	1    10600 1350
-	1    0    0    1   
 $EndComp
 $Comp
 L +3.3V #PWR014
@@ -497,16 +431,12 @@ Wire Wire Line
 Wire Wire Line
 	4150 3000 4050 3000
 Wire Wire Line
-	7950 3600 7950 3750
-Wire Wire Line
 	7350 3750 8300 3750
 Wire Wire Line
 	8300 3750 8300 3600
 Wire Wire Line
 	8100 3750 8100 3850
 Connection ~ 8100 3750
-Wire Wire Line
-	7950 3000 7950 3300
 Wire Wire Line
 	8300 3300 8300 3100
 Wire Wire Line
@@ -527,9 +457,6 @@ Connection ~ 9000 3100
 Wire Wire Line
 	8300 3100 8350 3100
 Wire Wire Line
-	7950 2700 7950 2550
-Connection ~ 7950 2550
-Wire Wire Line
 	9350 3100 8950 3100
 Wire Wire Line
 	9500 3150 9500 3400
@@ -538,16 +465,7 @@ Wire Wire Line
 	9500 2550 9500 2850
 Connection ~ 9500 2550
 Wire Wire Line
-	7950 5450 7950 5600
-Wire Wire Line
-	7950 5600 8300 5600
-Wire Wire Line
 	8300 5600 8300 5450
-Wire Wire Line
-	8100 5600 8100 5700
-Connection ~ 8100 5600
-Wire Wire Line
-	7950 4850 7950 5150
 Wire Wire Line
 	8300 5150 8300 4950
 Wire Wire Line
@@ -567,9 +485,6 @@ Wire Wire Line
 Connection ~ 9000 4950
 Wire Wire Line
 	8300 4950 8350 4950
-Wire Wire Line
-	7950 4550 7950 4400
-Connection ~ 7950 4400
 Wire Wire Line
 	9350 4950 8950 4950
 Wire Wire Line
@@ -596,7 +511,6 @@ Wire Wire Line
 	7050 3600 7350 3600
 Wire Wire Line
 	7350 3600 7350 3750
-Connection ~ 7950 3750
 Wire Wire Line
 	7050 3500 7400 3500
 Wire Wire Line
@@ -619,11 +533,6 @@ Wire Wire Line
 	9900 3400 9400 3400
 Wire Wire Line
 	9650 2550 9650 4400
-Wire Wire Line
-	10050 3550 9650 3550
-Connection ~ 9650 3550
-Wire Wire Line
-	10250 3550 10450 3550
 Wire Wire Line
 	9900 3400 9900 3650
 Wire Wire Line
@@ -735,13 +644,7 @@ Wire Wire Line
 	9850 2550 9850 1500
 Connection ~ 9650 2550
 Wire Wire Line
-	9850 1500 9750 1500
-Wire Wire Line
-	10250 1250 10400 1250
-Wire Wire Line
-	10250 1350 10400 1350
-Wire Wire Line
-	10250 1450 10400 1450
+	9750 1500 9950 1500
 Connection ~ 4250 2300
 Wire Wire Line
 	3600 2300 6300 2300
@@ -750,8 +653,29 @@ Wire Wire Line
 	6300 1000 6300 2900
 Text Notes 3750 3900 0    60   ~ 0
 We want to make source current from TINY to be <= 10 mA.\nSo we use MOC3043/MOC3063 - see last '3' here \nstands for modification with trigger current of 5 mA.\nThe Red LED is set up to drain less than 2 mA.
+$Comp
+L Screw_Terminal_01x02 J3
+U 1 1 5E7855C3
+P 10450 1500
+F 0 "J3" H 10450 1600 50  0000 C CNN
+F 1 "Screw_Terminal_01x02" H 10450 1300 50  0000 C CNN
+F 2 "Connectors_Terminal_Blocks:TerminalBlock_Pheonix_MKDS1.5-2pol" H 10450 1500 50  0001 C CNN
+F 3 "" H 10450 1500 50  0001 C CNN
+	1    10450 1500
+	1    0    0    -1  
+$EndComp
+Connection ~ 9850 1500
 Wire Wire Line
-	10250 1600 10250 1250
-Connection ~ 10250 1350
-Connection ~ 10250 1450
+	10250 1500 10150 1500
+$Comp
+L Screw_Terminal_01x02 J1
+U 1 1 5E786F25
+P 10650 3750
+F 0 "J1" H 10650 3850 50  0000 C CNN
+F 1 "Screw_Terminal_01x02" H 10650 3550 50  0000 C CNN
+F 2 "Connectors_Terminal_Blocks:TerminalBlock_Pheonix_MKDS1.5-2pol" H 10650 3750 50  0001 C CNN
+F 3 "" H 10650 3750 50  0001 C CNN
+	1    10650 3750
+	1    0    0    1   
+$EndComp
 $EndSCHEMATC
