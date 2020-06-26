@@ -1,9 +1,15 @@
 #define TASKER_MAX_TASKS 2
 #include "Tasker.h"
+// WALL_SWITCH_MODE should be used when RF block is replaced with wall switch connected to ground and S1-S4 pins
+//#define WALL_SWITCH_MODE
 
 Tasker tasker;
 
-byte buttonPressed = 0x00;
+volatile byte buttonPressed = 0x00;
+#ifdef WALL_SWITCH_MODE
+volatile byte state = 0x00;
+volatile byte newState = 0x00;
+#endif
 byte iCmdCode = 0x00;
 byte iArgument = 0x00;
 byte iStep = 0;
@@ -15,23 +21,27 @@ void setup() {
   DDRA = 0x00;
   PUEA = 0x0f;
 
+  #ifdef WALL_SWITCH_MODE
+  state = 0x0f & ~PINA;
+  #endif
+
   GIMSK |= _BV(PCIE0);
   PCMSK0 = _BV(PCINT0) | _BV(PCINT1) | _BV(PCINT2) | _BV(PCINT3);
 
   Serial1.begin(19200);
 }
 
-ISR(PCINT0_vect) { 
-  //cli();
-
+ISR(PCINT0_vect) {
+  #ifdef WALL_SWITCH_MODE
+  newState = 0x0f & ~PINA;
+  tasker.cancel(fix_state);
+  tasker.setTimeout(fix_state, 50);
+  #else
   byte state = PINA & 0x0f;
   if (state) {
-//    byte patch = bitRead(state, 3) | bitRead(state, 0) | (bitRead(state, 2) << 1) | (bitRead(state, 1) << 1);
-//    buttonPressed = patch;
     buttonPressed = state;
   }
-
-  //sei();
+  #endif
 }
 
 void loop() {
@@ -75,17 +85,27 @@ void loop() {
   }
 }
 
+#ifdef WALL_SWITCH_MODE
+void fix_state() {
+  buttonPressed = newState ^ state;
+  state = newState;
+}
+#endif
+
 void start_bind() {
-  PORTB &= ~0x04;
-  tasker.setTimeout(release_rf_sw, 2500);
+  if (PORTB & 0x04) {
+    PORTB &= ~0x04;
+    tasker.setTimeout(release_rf_sw, 2500);
+  }
 }
 
 void start_clear() {
-  PORTB &= ~0x04;
-  tasker.setTimeout(release_rf_sw, 9000);
+  if (PORTB & 0x04) {
+    PORTB &= ~0x04;
+    tasker.setTimeout(release_rf_sw, 9000);
+  }
 }
 
 void release_rf_sw() {
   PORTB |= 0x04;
 }
-
